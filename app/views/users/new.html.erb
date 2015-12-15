@@ -1,0 +1,26 @@
+<div class="create">
+  <div class="container">
+  	
+  	<div class="prompt">
+        	<%= image_tag "bee.png", width:"62px", height:"72px" %>
+        	<p id='friend'>cool.<br><br>Create a MattID.</p>
+   	</div>
+  
+    <%= form_for(@user) do |f| %>  
+  <div class="field"> 
+	<div class='user_info'>
+    <%= f.text_field :first_name, :placeholder => 'First Name' %><br> 
+<!--    <%= f.text_field :last_name, :placeholder => 'Last Name' %><br> -->
+    <%= f.email_field :email, :placeholder => 'Email' %>
+    </div>
+	<div class='account_info'>
+	<%= f.text_field :username, :placeholder => 'New MattID' %><br>
+    <%= f.password_field :password, :placeholder => 'Password' %>
+    </div>
+  </div> 
+  <div class="actions"> 
+    <%= f.submit "Create" %> 
+  </div> 
+<% end %>
+  </div>
+</div>

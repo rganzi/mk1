@@ -1,0 +1,35 @@
+<% if current_user %> 
+  <ul>
+	<li><h4>Welcome</h4></li>  
+    <li><%= current_user.username %></li> 
+    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+  </ul> 
+<% else %> 
+  <ul> 
+    <li><%= link_to "Login", 'login' %></a></li> 
+    <li><%= link_to "Signup", 'signup' %></a></li> 
+  </ul> 
+<% end %>
+
+<div class="main">
+      <div class="container">
+        
+        <%= form_for @new_post do |t| %>
+        <%= t.text_area :comment, id:'text-box' %><br>
+		<%= t.submit %>
+		<% end %>
+        
+        <ul class="comments">
+          <% @all_posts.each do |p| %>
+  			<div class="comment">
+  			<li><%= word_wrap(p.comment, line_width: 5) %><br><br>
+			<div class="tag">
+			<%= p.created_at %>
+			by <%= p.author %></li>
+			</div>
+			<% end %>
+  			</div>
+		</ul>
+
+    </div>
+</div>

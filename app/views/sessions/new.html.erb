@@ -1,0 +1,17 @@
+<div class='create_ID'>
+	<div class="prompt">
+        	<%= image_tag "bee.png", width:"62px", height:"72px" %>
+        	<p id='friend'>Matt's friend. <%= link_to "Create a MattID", new_user_path %></p>
+   	</div>
+</div>
+
+<div class='signin'>
+<p>or</p>
+<p>Log in to your existing KungAccount</p>
+
+<%= form_for(:session, url: login_path) do |f| %> 
+  <%= f.text_field :username, :placeholder => "MattID" %> 
+  <%= f.password_field :password, :placeholder => "Password" %> 
+  <%= f.submit "Log in", class: "btn-submit" %>
+<% end %>
+</div>

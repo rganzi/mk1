@@ -1,0 +1,32 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment {
+	margin-top: 30px;
+	}
+
+ul li {
+	list-style:none;
+	text-align: left;
+	}
+
+#text-box {
+	height:70px;
+	width:100%;
+	}
+	
+.tag {
+	color:#999;
+	}
+
+.container {
+	margin: 0 auto;
+	width:320px;
+	}
+
+ul {
+	padding-left:0;
+	}
+
+	
