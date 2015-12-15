@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 	root 'posts#index'
   	resources :posts
 	
-	get 'signup'  => 'users#new' 
+	get '/signup'  => 'users#new' 
 	resources :users
 	
 	get '/login' => 'sessions#new'
