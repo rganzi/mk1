@@ -14,11 +14,21 @@
  *= require_self
  */
 
-h1 {
-	font-family: 'Mountains of Christmas', cursive;
-	font-size: 44px;
-	}
-
 #title {
 	text-align: center;
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 48px;
+	font-weight: 700;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
 	}
+	
+#title a {
+	text-decoration: none;
+	color:purple;
+	}
+	
+.replies {margin-left: 50px;}
+
+/* 5 levels nesting */
+.replies .replies .replies .replies .replies {margin-left: 0;}

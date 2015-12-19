@@ -1,0 +1,31 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+	background-image: none !important;
+	background-color: white !important;
+	margin: 0 auto !important;
+	text-align: center !important;
+	}
+
+.btn {
+	background-image: none !important;
+	}
+
+.btn:hover {
+	background-color: #ececec !important;
+	}
+
+.well {
+	background-image: none !important;
+	background-color: white !important;
+	}
+
+.well blockquote {
+	border-color: purple !important;
+	} 
+	
+.alert {
+	background-image: none !important;
+	}

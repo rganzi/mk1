@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-	text-align:center;
-	}
 	
 .prompt {
 	text-align: center;
@@ -15,10 +12,6 @@
 	display: inline;
 	}
 	
-.field {
-	margin-bottom: 18px;
-	}
-
-.user_info {
-	margin-bottom: 9px;
+input {
+	width: 100%;
 	}

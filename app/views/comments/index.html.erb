@@ -1,0 +1,22 @@
+<% if current_user %> 
+  <ul>
+	<li><h3>Welcome, <%= current_user.username %></h3></li> 
+    <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+  </ul> 
+<% else %> 
+  <ul> 
+    <li><%= link_to "Login", 'login' %></a></li> 
+    <li><%= link_to "Signup", 'signup' %></a></li> 
+  </ul> 
+<% end %>
+
+<div class="jumbotron">
+  <div class="container">
+    <h2>Join a Matt-based discussion!</h2>
+    <p>
+      <%= link_to 'Add new topic', new_comment_path, class: 'btn btn-default btn-lg' %>
+    </p>
+  </div>
+</div>
+
+<%= comments_tree_for @comments %>

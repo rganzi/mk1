@@ -1,4 +1,4 @@
-<div class="create">
+
   <div class="container">
   	
   	<div class="prompt">
@@ -7,20 +7,40 @@
    	</div>
   
     <%= form_for(@user) do |f| %>  
-  <div class="field"> 
-	<div class='user_info'>
-    <%= f.text_field :first_name, :placeholder => 'First Name' %><br> 
+  <div class="form-horizontal"> 
+    	<div class="form-group">
+		<label class="control-label col-sm-4 col-md-5 col-lg-5" for="first_name">First name</label>
+		<div class="col-sm-5 col-md-3 col-lg-3">
+			<%= f.text_field :first_name, :placeholder => 'make one up' %>
+		</div> 
+		</div>
 <!--    <%= f.text_field :last_name, :placeholder => 'Last Name' %><br> -->
-    <%= f.email_field :email, :placeholder => 'Email' %>
-    </div>
+		<div class="form-group">
+    	<label class="control-label  col-sm-4 col-md-5 col-lg-5" for="email">Email address</label>
+	    <div class="col-sm-5 col-md-3 col-lg-3">
+    		<%= f.email_field :email, :placeholder => 'enter junk email here' %>
+    	</div>
+		</div>
+
 	<div class='account_info'>
-	<%= f.text_field :username, :placeholder => 'New MattID' %><br>
-    <%= f.password_field :password, :placeholder => 'Password' %>
+	<div class="form-group">
+    <label class="control-label  col-sm-4 col-md-5 col-lg-5" for="username">MattID</label>
+    <div class="col-sm-5 col-md-3 col-lg-3">
+	<%= f.text_field :username, :placeholder => 'choose one' %>
+	</div>
+	</div>
+	<div class="form-group">
+    <label class="control-label  col-sm-4 col-md-5 col-lg-5" for="password">Password</label>
+    <div class="col-sm-5 col-md-3 col-lg-3">
+    <%= f.password_field :password, :placeholder => "it'll be encrypted" %>
+    </div>
+    </div>
     </div>
   </div> 
-  <div class="actions"> 
-    <%= f.submit "Create" %> 
-  </div> 
-<% end %>
-  </div>
-</div>
+  	<div class="form-group">
+    <div class="col-sm-offset-4 col-md-offset-5 col-lg-offset-5  col-sm-5 col-md-3 col-lg-3">
+    <%= f.submit "Create", class: "btn btn-default" %> 
+    </div> 
+    <% end %>
+    </div>
+</div>  

@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.signin {
-	margin-top:18px;
+.writing {
 	text-align:center;
+	margin-bottom: 30px;
 	}
 	
-.create_ID {
-	margin-top:32px;
+.b-prompt {
 	text-align: center;
+	}
+	
+input {
+	width:100%
 	}
